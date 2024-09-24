@@ -3,17 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Idle Game</title>
+    <title>Queue-based Idle Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="actionQueueContainer">
+        <h3>Action Queue</h3>
+        <ul id="actionQueue"></ul>
+    </div>
     <div id="game">
-        <h1>Idle Game</h1>
-        <p>Gold: <span id="gold">0</span></p>
-        <button id="mineGold">Mine Gold</button>
-        <br>
-        <p>Workers: <span id="workers">0</span></p>
-        <button id="buyWorker">Buy Worker (Cost: <span id="workerCost">10</span> gold)</button>
+        <h1>Loop Idle Game</h1>
+        <p>Attempt 2 at making a sensible idle game</p>
+        <p>Energy: <span id="energy">100</span></p>
+        <div class="actions">
+            <div class="action-buttons">
+                <button onclick="addAction('walk')">Walk (1 energy)</button>
+                <button onclick="addAction('eat')">Eat (2 energy)</button>
+                <button onclick="addAction('hunt')">Hunt (3 energy)</button>
+            </div>
+        </div>
+        <button id="startLoop">Start Loop</button>
+        <button id="resetGame">Reset Game</button>
+        <h3>Stats</h3>
+        <p>Distance Walked: <span id="distance">0</span> km</p>
+        <p>Food Eaten: <span id="food">0</span></p>
+        <p>Animals Hunted: <span id="animals">0</span></p>
     </div>
     <script src="game.js"></script>
 </body>

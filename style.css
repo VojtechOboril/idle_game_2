@@ -3,9 +3,19 @@ body {
     background-color: #f4f4f4;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Align items at the top */
     height: 100vh;
     margin: 0;
+}
+
+#actionQueueContainer {
+    position: sticky; /* Stick to the left side */
+    top: 20px; /* Offset from the top */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; /* Space between queue and game */
 }
 
 #game {
@@ -14,11 +24,42 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    width: 300px;
 }
 
 button {
-    margin-top: 10px;
+    margin: 5px;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+}
+
+.action-buttons {
+    margin: 10px 0;
+}
+
+#actionQueue {
+    list-style: none;
+    padding: 0;
+}
+
+#actionQueue li {
+    padding: 5px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 5px 0;
+    text-align: left;
+}
+
+#actionQueue li.active {
+    background-color: #f9c74f; /* Highlight color for active action */
+    border-color: #f9844a;
+    font-weight: bold;
+}
+
+#actionQueue li.executed {
+    background-color: #d3d3d3; /* Color for executed actions */
+    border-color: #aaa;
+    text-decoration: line-through; /* Strike through executed actions */
 }

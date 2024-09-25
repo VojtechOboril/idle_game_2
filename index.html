@@ -17,9 +17,9 @@
         <p>Energy: <span id="energy">100</span></p>
         <div class="actions">
             <div class="action-buttons">
-                <button onclick="addAction('walk')">Walk (1 energy)</button>
-                <button onclick="addAction('eat')">Eat (2 energy)</button>
-                <button onclick="addAction('hunt')">Hunt (3 energy)</button>
+                <button data-action="walk">Walk (1 energy)</button>
+                <button data-action="eat">Eat (2 energy)</button>
+                <button data-action="hunt">Hunt (3 energy)</button>
             </div>
         </div>
         <button id="startLoop">Start Loop</button>
@@ -29,6 +29,6 @@
         <p>Food Eaten: <span id="food">0</span></p>
         <p>Animals Hunted: <span id="animals">0</span></p>
     </div>
-    <script src="game.js"></script>
+    <script src="game.js" type="module"></script>
 </body>
 </html>
